@@ -12,14 +12,14 @@ public class AnalizadorTexto {
         int totalVocales = 0;
 
         for (int i = 0; i < texto.length(); i++) {
-            char c = texto.charAt(i);
-            if (c >= 'a' && c <= 'z') {
-                frecuencia[c - 'a']++;
+            char caracter = texto.charAt(i);
+            if (caracter >= 'a' && caracter <= 'z') {
+                frecuencia[caracter - 'a']++;
                 totalLetras++;
-                if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                if (caracter == 'a' || caracter == 'e' || caracter == 'i' || caracter == 'o' || caracter == 'u') {
                     totalVocales++;
                 }
-            } else if (c == ' ' && i > 0 && texto.charAt(i - 1) != ' ') {
+            } else if (caracter == ' ' && i > 0 && texto.charAt(i - 1) != ' ') {
                 totalPalabras++;
             }
         }
